@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  --primary-color: rgb(38, 61, 136);
+  --secondary-color: rgb(172, 191, 255);
+  --font-color: #333;
+}
+
+html,
+body {
+  font-size: 20px;
+  line-height: 1.5em;
+  color: var(--font-color);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-image: url("./mesh.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & h1,
+  & p {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    padding: 0 3em;
+    text-shadow: 0px 0px 3px black;
+  }
+  & h1 {
+    font-size: 3em;
+  }
+  & p {
+    max-width: 900px;
+    margin: 1em 0;
+  }
+}
+
+main {
+  padding: 3em;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 20% 60% 20%;
+  column-gap: 1em;
+  grid-template-areas:
+    ". welcome ."
+    ". map ."
+    ". faq ."
+    ". contact .";
+}
+
+section.top {
+  grid-area: welcome;
+}
+
+section.map {
+  grid-area: map;
+
+  & img {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+  }
+}
+
+section.faq {
+  grid-area: faq;
+}
+
+section.contact {
+  grid-area: contact;
+}
+
+section.box {
+  background-color: var(--secondary-color);
+  padding: 1.2em 1em 1em 1em;
+  margin: 1em 0 4em 0;
+  border-radius: 8px;
+
+  & h2 {
+    margin: 0 0 1em 0;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "welcome"
+      "map"
+      "faq"
+      "contact";
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    padding: 1.5em;
+  }
+  header p,
+  header h1 {
+    padding: 0 1rem;
+  }
+}
+
+h1 {
+  font-size: 2.3em;
+  margin: 0 0 1em 0;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin: 3em 0 1em 0;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 1.5em 0 1em 0;
+  line-height: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 1.2em 0 0.2em 0;
+  line-height: 1em;
+}
+
+p {
+  margin: 0.5em 0 0.2em 0;
+}
+
+a {
+  color: var(--font-color);
+
+  &:hover {
+    color: #339;
+  }
+}
