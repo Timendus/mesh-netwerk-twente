@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const data = new FormData(form);
     const url =
-      "http://www.mesh-network.nl/twente/node/" + data.get("gen-node-id");
+      "https://www.mesh-network.nl/twente/node/" + data.get("gen-node-id");
     const qr = qrcodegen.QrCode.encodeText(url, qrcodegen.QrCode.Ecc.MEDIUM);
     const svg = toSvgString(qr, 0, "#ffffff", "#000000");
 
