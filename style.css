@@ -17,6 +17,14 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.page {
+  display: none;
+
+  &.selected {
+    display: block;
+  }
+}
+
 header {
   background-image: url("./mesh.png");
   background-size: cover;
