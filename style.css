@@ -151,3 +151,33 @@ a {
     color: #339;
   }
 }
+
+ul {
+  margin: 1em 0 1em 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 5em 0;
+
+  & label {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.2em 0 0.2em 0;
+    line-height: 1em;
+  }
+
+  & input,
+  & textarea,
+  & button {
+    margin: 0.5em 0 0.2em 0;
+    font-size: 1em;
+    padding: 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--font-color);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
