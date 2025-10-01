@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.innerHTML = `
       <section class='label'>
-        <img src="meshtastic.png"/>
+        <img src="/style/meshtastic.png"/>
         <h1>Mesh Network Twente</h1>
 
         <div class="columns">

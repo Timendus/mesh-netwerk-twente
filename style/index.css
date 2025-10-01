@@ -209,6 +209,26 @@ section.label {
 
     & p {
       text-align: left;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: bottom;
+        margin-right: 0.3rem;
+      }
+      &.tech:before {
+        background-image: url("./tech.png");
+      }
+      &.battery:before {
+        background-image: url("./battery.png");
+      }
+      &.power:before {
+        background-image: url("./power.png");
+      }
     }
   }
 
