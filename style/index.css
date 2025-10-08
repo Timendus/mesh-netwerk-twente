@@ -190,6 +190,14 @@ form {
   }
 }
 
+@media print {
+  /* Ask the browser not to drop backgrounds */
+  * {
+    -webkit-print-color-adjust: exact; /* Chrome/Edge */
+    print-color-adjust: exact; /* Standard-ish */
+  }
+}
+
 section.label {
   width: 22rem;
   text-align: center;
@@ -209,16 +217,19 @@ section.label {
 
     & p {
       text-align: left;
+      max-width: 8rem;
+      padding-left: 1rem;
 
       &:before {
         content: "";
         display: inline-block;
         width: 0.8rem;
         height: 0.8rem;
+        margin-left: -1.1rem;
+        margin-right: 0.3rem;
         background-repeat: no-repeat;
         background-size: contain;
         vertical-align: bottom;
-        margin-right: 0.3rem;
       }
       &.tech:before {
         background-image: url("./tech.png");
