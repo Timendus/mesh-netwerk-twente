@@ -190,14 +190,6 @@ form {
   }
 }
 
-@media print {
-  /* Ask the browser not to drop backgrounds */
-  * {
-    -webkit-print-color-adjust: exact; /* Chrome/Edge */
-    print-color-adjust: exact; /* Standard-ish */
-  }
-}
-
 section.label {
   width: 22rem;
   text-align: center;
@@ -207,7 +199,7 @@ section.label {
 
   & img,
   & svg {
-    width: 8rem;
+    width: 9rem;
   }
   & .columns {
     display: flex;
@@ -215,30 +207,26 @@ section.label {
     gap: 2rem;
     margin: 2rem 0;
 
-    & p {
+    & ul {
       text-align: left;
-      max-width: 8rem;
-      padding-left: 1rem;
+      width: 9rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
-        margin-left: -1.1rem;
-        margin-right: 0.3rem;
-        background-repeat: no-repeat;
-        background-size: contain;
-        vertical-align: bottom;
-      }
-      &.tech:before {
-        background-image: url("./tech.png");
-      }
-      &.battery:before {
-        background-image: url("./battery.png");
-      }
-      &.power:before {
-        background-image: url("./power.png");
+      & li {
+        position: relative;
+        padding-left: 1.1rem;
+        font-size: 0.8rem;
+
+        & img {
+          position: absolute;
+          left: 0;
+          top: 0.35rem;
+          width: 0.8rem;
+          height: 0.8rem;
+          object-fit: contain;
+        }
       }
     }
   }

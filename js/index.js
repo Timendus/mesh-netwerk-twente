@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="columns">
           ${svg}
-          <div>
-            <p class="tech">${data.get("gen-tech")}</p>
-            <p class="battery">${data.get("gen-battery")}</p>
-            <p class="power">${data.get("gen-power")}</p>
-          </div>
+          <ul>
+            <li><img src="/style/tech.png"/>${data.get("gen-tech")}</li>
+            <li><img src="/style/battery.png"/>${data.get("gen-battery")}</li>
+            <li><img src="/style/power.png"/>${data.get("gen-power")}</li>
+          </ul>
         </div>
 
         <p class="url">${url}</p>
