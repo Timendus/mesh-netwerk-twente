@@ -43,20 +43,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const svg = toSvgString(qr, 0, "#ffffff", "#000000");
 
     document.body.innerHTML = `
-      <section class='label'>
-        <img src="/style/meshtastic.png"/>
-        <h1>Mesh Network Twente</h1>
+      <section class="labels">
+        <section class='label'>
+          <img src="/style/meshtastic.png"/>
+          <h1>Mesh Network Twente</h1>
 
-        <div class="columns">
-          ${svg}
-          <ul>
-            <li><img src="/style/tech.png"/>${data.get("gen-tech")}</li>
-            <li><img src="/style/battery.png"/>${data.get("gen-battery")}</li>
-            <li><img src="/style/power.png"/>${data.get("gen-power")}</li>
-          </ul>
-        </div>
+          <div class="columns">
+            ${svg}
+            <ul>
+              <li><img src="/style/tech.png"/>${data.get("gen-tech")}</li>
+              <li><img src="/style/battery.png"/>${data.get("gen-battery")}</li>
+              <li><img src="/style/power.png"/>${data.get("gen-power")}</li>
+            </ul>
+          </div>
 
-        <p class="url">${url}</p>
+          <p class="url">${url}</p>
+        </section>
+
+        <section class='label narrow'>
+          <img src="/style/meshtastic.png"/>
+          <h1>Mesh Network Twente</h1>
+
+          <div class="rows">
+            <ul>
+              <li><img src="/style/tech.png"/>${data.get("gen-tech")}</li>
+              <li><img src="/style/battery.png"/>${data.get("gen-battery")}</li>
+              <li><img src="/style/power.png"/>${data.get("gen-power")}</li>
+            </ul>
+            ${svg}
+          </div>
+
+          <p class="url">${url}</p>
+        </section>
       </section>
     `;
 

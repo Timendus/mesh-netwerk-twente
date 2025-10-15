@@ -190,18 +190,39 @@ form {
   }
 }
 
+:root {
+  font-size: 1em;
+}
+@media print {
+  :root {
+    font-size: 0.8em;
+  }
+}
+
+section.labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  gap: 2rem;
+}
+
 section.label {
   width: 22rem;
   text-align: center;
-  margin: 10rem auto;
   padding: 2rem;
   border: 1px solid black;
+
+  &.narrow {
+    width: 17rem;
+  }
 
   & img,
   & svg {
     width: 9rem;
   }
-  & .columns {
+  & .columns,
+  & .rows {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -218,16 +239,27 @@ section.label {
         position: relative;
         padding-left: 1.1rem;
         font-size: 0.8rem;
+        line-height: 1.4rem;
 
         & img {
           position: absolute;
           left: 0;
-          top: 0.35rem;
+          top: 50%;
+          margin-top: -0.4rem;
           width: 0.8rem;
           height: 0.8rem;
           object-fit: contain;
         }
       }
+    }
+  }
+
+  & .rows {
+    flex-direction: column;
+    align-items: center;
+
+    & ul {
+      width: auto;
     }
   }
 
