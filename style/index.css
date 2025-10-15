@@ -154,6 +154,14 @@ a {
   }
 }
 
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  padding: 4px 6px 1px 6px;
+}
+
 ul {
   margin: 1em 0 1em 2em;
 }
