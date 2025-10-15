@@ -5,6 +5,8 @@
 
   --primary-color: rgb(38, 61, 136);
   --secondary-color: rgb(172, 191, 255);
+  --secondary-highlight-color: rgb(147, 172, 255);
+  --gray-color: #e4e4e4;
   --font-color: #333;
 }
 
@@ -15,14 +17,6 @@ body {
   color: var(--font-color);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.page {
-  display: none;
-
-  &.selected {
-    display: block;
-  }
 }
 
 header {
@@ -170,6 +164,7 @@ form {
   margin: 0 0 5em 0;
 
   & label {
+    display: block;
     font-size: 1em;
     font-weight: bold;
     margin: 1.2em 0 0.2em 0;
@@ -179,6 +174,7 @@ form {
   & input,
   & textarea,
   & button {
+    width: 100%;
     margin: 0.5em 0 0.2em 0;
     font-size: 1em;
     padding: 0.5em;
@@ -187,6 +183,19 @@ form {
     color: var(--font-color);
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+    &:disabled {
+      background-color: var(--gray-color);
+    }
+  }
+
+  & button {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--secondary-highlight-color);
+    }
   }
 }
 

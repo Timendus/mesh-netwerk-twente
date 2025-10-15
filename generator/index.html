@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesh Network</title>
+    <link rel="stylesheet" type="text/css" href="/style/index.css" />
+    <script type="text/javascript" src="/js/qrcodegen.js"></script>
+    <script type="text/javascript" src="/js/generator.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Mesh Network Twente</h1>
+      <p>
+        Mesh Network Twente is een groep vrijwilligers die een draadloos netwerk
+        in Twente aan het opbouwen zijn, van en voor iedereen.
+      </p>
+    </header>
+    <main id="generator">
+      <section class="top">
+        <h1>Label generator</h1>
+        <form>
+          <label for="gen-node-id">Node ID</label>
+          <p>Acht karakters hexadecimaal, zonder uitroepteken</p>
+          <input
+            type="text"
+            name="gen-node-id"
+            id="gen-node-id"
+            placeholder="1a2b3c4d"
+            value="1a2b3c4d"
+          />
+          <label for="gen-tech">Technologie</label>
+          <input
+            type="text"
+            name="gen-tech"
+            id="gen-tech"
+            placeholder="NRF52 SX1262"
+            value="NRF52 SX1262"
+          />
+          <label for="gen-battery">Batterij</label>
+          <input
+            type="text"
+            name="gen-battery"
+            id="gen-battery"
+            placeholder="3.3v 2000mAh"
+            value="3.3v 2000mAh"
+          />
+          <label for="gen-power">Zendvermogen</label>
+          <input
+            type="text"
+            name="gen-power"
+            id="gen-power"
+            placeholder="158mW"
+            value="158mW"
+          />
+          <button type="submit">Maak label</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
