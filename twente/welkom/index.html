@@ -26,14 +26,72 @@
       </section>
 
       <section class="map">
-        <h2>Instellingen voor Meshtastic nodes</h2>
-        <h3>Rollen</h3>
+        <h3>Digitale dienstverlening</h3>
+
+        <h4>Communicatie</h4>
+        <p>
+          Op Meshtastic maken we gebruik van de kanalen LongFast en Twente. Het
+          kanaal Twente heeft het gebruikelijke wachtwoord <code>AQ==</code>, of
+          je kunt het aan je Meshtastic app toevoegen met
+          <a
+            href="https://meshtastic.org/e/?add=true#CgsSAQEaBlR3ZW50ZRISCAE4A0AFSAFQG2gBwAYByAYB"
+            >deze link</a
+          >.
+        </p>
+        <p>
+          Helaas is de mesh nog niet altijd toereikend. Daarom hebben we een
+          Telegram community waarin we met elkaar praten over de ontwikkeling
+          van de mesh in Twente, LoRa hardware en andere onzin. Er is ook een
+          bot die alle berichtjes op LongFast uit heel Twente met ons deelt.
+        </p>
+        <p>
+          Je kunt lid worden van deze Telegram community via
+          <a href="https://t.me/twentastic">deze link</a>.
+        </p>
+
+        <h4>Rogue nodes</h4>
+        <p>
+          Als je een node "in het wild" in Twente wilt installeren, dan hebben
+          we op deze website een <a href="/generator">label generator</a> om het
+          een beetje professioneel over te laten komen. Het label bevat
+          hoofdzakelijk een link naar
+          <a href="/twente">een pagina met wat geruststellende uitleg</a> over
+          het hoe en wat van mesh netwerken. In de link zit een node ID zodat
+          wij weer weten waar het over gaat wanneer mensen contact met ons
+          zoeken.
+        </p>
+        <p>
+          Voel je vrij om het label te gebruiken wanneer je nodes in Twente
+          plaatst, maar houd je dan ook aan de beschreven spelregels en kondig
+          het even aan in de bovengenoemde Telegram groep, zodat wij jou weer
+          kunnen vinden mocht er iets zijn.
+        </p>
+
+        <h4>Deze website</h4>
+        <p>
+          Als je feedback hebt op de teksten op deze website, of denkt dat het
+          nog mooier kan: alles is Open Source en voel je vrij om een pull
+          request te openen op
+          <a href="https://github.com/Timendus/mesh-netwerk-twente">Github</a>.
+        </p>
+        <p>
+          Mocht je in een andere regio ook gebruik willen maken van deze
+          website, neem dan even contact op via het
+          <a href="/twente#contact">contactformulier</a>,
+          <a href="https://github.com/Timendus/mesh-netwerk-twente">Github</a>
+          of <a href="https://t.me/twentastic">Telegram</a>, dan kunnen we vast
+          wel iets moois regelen.
+        </p>
+
+        <h3>Instellingen voor Meshtastic nodes</h3>
+
+        <h4>Rollen</h4>
         <p>
           De rollen <code>CLIENT</code>, <code>CLIENT_MUTE</code> en
           <code>CLIENT_BASE</code> zijn veilig om in Twente te gebruiken. We
           raden <code>CLIENT</code> of <code>CLIENT_BASE</code> aan voor nodes
-          op je dak of in je nok en <code>CLIENT_MUTE</code> voor nodes die je
-          bij je draagt. Een node op je auto kun je beter de rol
+          op je dak, mast of zolder en <code>CLIENT_MUTE</code> voor nodes die
+          je bij je draagt. Een node op je auto kun je beter de rol
           <code>CLIENT</code> geven dan <code>CLIENT_BASE</code>, zodat deze de
           node op je dak niet overstemt wanneer je voor je deur geparkeerd
           staat.
@@ -46,9 +104,10 @@
           <code>REPEATER</code> aan het uitfaseren, maar daarvoor geldt
           hetzelfde.
         </p>
-        <h3>Posities</h3>
+
+        <h4>Posities</h4>
         <p>
-          Het is fijn als de locaties die je nodes delen een beetje kloppen. Dit
+          Het is fijn als de posities die je nodes delen een beetje kloppen. Dit
           helpt ons om te begrijpen welke verbindingen we wel en niet kunnen
           leggen, en geeft houvast bij het plannen van nieuwe locaties om de
           mesh te versterken.
@@ -67,67 +126,142 @@
           is verbonden met het Internet (groene bolletjes) kun je hier goed zien
           of jouw positie correct wordt doorgegeven:
         </p>
-        <a
-          href="https://map.meshnet.nl/?lat=52.31897292691066&lng=366.60861968994146&zoom=11#"
-        >
-          <img src="/style/map.png" />
-        </a>
-      </section>
-
-      <section class="faq">
-        <h2>Verbindingen</h2>
-        <h3>Kopje</h3>
-        <p>Tekst</p>
-
-        <h2>Digitale dienstverlening</h2>
-        <h3>Communicatie</h3>
         <p>
-          Op Meshtastic maken we gebruik van de kanalen LongFast en Twente. Het
-          kanaal Twente heeft het gebruikelijke wachtwoord <code>AQ==</code>, of
-          je kunt het aan je Meshtastic app toevoegen met
           <a
-            href="https://meshtastic.org/e/?add=true#CgsSAQEaBlR3ZW50ZRISCAE4A0AFSAFQG2gBwAYByAYB"
-            >deze link</a
+            href="https://map.meshnet.nl/?lat=52.31897292691066&lng=366.60861968994146&zoom=11#"
+          >
+            <img src="/style/map.png" />
+          </a>
+        </p>
+
+        <h3>Tips & Tricks voor betere verbindingen</h3>
+
+        <h4>"Line of sight"</h4>
+        <p>
+          Je kunt verrassend lange verbindingen maken zolang twee nodes elkaar
+          maar kunnen "zien". Hoe meer obstakels er tussen zender en ontvanger
+          zitten, hoe kleiner de kans dat je elkaar ontvangt. En een heuvel of
+          de kromming van de Aarde is al helemaal problematisch.
+        </p>
+        <p>
+          Daarom wil je een node liefst buiten en liefst zo hoog mogelijk
+          plaatsen. Je muren en je dak zijn een groot obstakel voor radiogolven.
+          En hoe hoger je de node kunt plaatsen, hoe minder gebouwen, bomen en
+          grond er tussen jou en de nodes om je heen zitten. Goede kans dat je
+          zult ontdekken dat er een hoogte is waarboven je opeens wèl een
+          verbinding kunt maken terwijl dat een metertje lager nog niet lukt.
+        </p>
+        <p>
+          Daarom hebben veel van ons een tweede node op een kleine antennemast
+          op het dak, of aan een hoge paal in de tuin. Als doorgeefluik om ons
+          huis in en uit te komen. En dat is ook waarom we altijd op zoek zijn
+          naar hoge locaties om nodes te plaatsen.
+        </p>
+
+        <h4>Een goede antenne</h4>
+        <p>
+          Na de locatie is de grootste bepalende factor de antenne. Antennes
+          kunnen meer of minder geschikt zijn voor de frequentie die we
+          gebruiken, en de manier om daar achter te komen is door de SWR te
+          meten. Een SWR onder de 2 is bruikbaar, maar je wilt het liefst zo
+          dicht mogelijk bij de 1 zitten. Een goede SWR zit onder de 1.2.
+        </p>
+        <p>
+          Helaas heb je om dat te meten een apparaatje en een beetje handigheid
+          nodig, en lukt dat pas als je de antenne al in bezit hebt. De
+          betrouwbaardere webshops vertellen je niet alleen wat de SWR van hun
+          antennes is, maar laten je ook de grafieken zien waar dat uit blijkt.
+          Het loont dus vaak de moeite om net een paar euro meer uit te geven
+          aan een webshop die die informatie met je wil delen.
+        </p>
+        <p>
+          Naast de SWR is ook het aantal dBi van de antenne van belang. Dit is
+          een waarde voor de mate waarin de antenne het signaal "buigt" van een
+          bol naar een pannenkoek. Onderstaand plaatje legt dat beter uit. Een
+          hogere dBi is niet persé beter dan een lagere dBi. Een lage SWR en een
+          goede "line of sight" zijn betere indicatoren voor een goed signaal
+          dan een hoge dBi.
+        </p>
+        <p>
+          <img src="/style/antennes.jpg" />
+        </p>
+        <p>
+          Daarnaast heb je nog richtantennes die het signaal niet naar een
+          pannenkoek "buigen", maar meer zoals een zaklamp in één richting. Dit
+          soort antennes zijn erg nuttig om een lange verbinding te maken,
+          bijvoorbeeld wanneer je in een omgeving zonder andere nodes woont en
+          één goede router wilt bereiken die jou kan aansluiten op de rest van
+          de mesh.
+        </p>
+        <p>
+          Let ook op dat je tussen de radio en de antenne zo min mogelijk kabel
+          wilt hebben, en van zo hoog mogelijke kwaliteit. Als je een goede
+          antenne hebt gekocht maar toch niet tevreden bent kan het goed zijn
+          dat je kabel te lang is, of teveel signaalverlies heeft. Daarom hangen
+          veel mensen hun node buiten, direct onder de antenne, in een
+          waterdichte behuizing.
+        </p>
+
+        <h4>Meer zendvermogen</h4>
+        <p>
+          Het is in Europa toegestaan om met 500mW (27dBm) te zenden in de ISM
+          band waar onze mesh actief is. Zolang je onder de duty cycle van
+          minder dan 10% blijft. Zie ook
+          <a href="https://wetten.overheid.nl/BWBR0036378/2025-07-01#Bijlagen"
+            >de Regeling gebruik van frequentieruimte zonder vergunning en
+            zonder meldingsplicht 2015</a
           >.
         </p>
         <p>
-          Helaas is de mesh nog niet altijd toereikend. Daarom hebben we een
-          Telegram community waarin we met elkaar praten over de ontwikkeling
-          van de mesh in Twente, LoRa hardware en andere onzin. Er is ook een
-          bot die alle berichtjes op LongFast uit heel Twente met ons deelt. Je
-          kunt lid worden van deze community via
-          <a href="https://t.me/twentastic">deze link</a>.
-        </p>
-        <h3>Rogue nodes</h3>
-        <p>
-          Als je een node "in het wild" in Twente wilt installeren, dan hebben
-          we op deze website een <a href="/generator">label generator</a> om het
-          een beetje professioneel over te laten komen. Het label bevat
-          hoofdzakelijk een link naar
-          <a href="/twente">een pagina met wat geruststellende uitleg</a> over
-          het hoe en wat van mesh netwerken. In de link zit een node ID zodat
-          wij weer weten waar het over gaat wanneer mensen contact met ons
-          zoeken.
+          De meeste nodes komen echter niet verder dan ongeveer 160mW (22dBm).
+          Ook geeft je aansluiting op de antenne vaak een paar decibel
+          signaalverlies. Dat betekent dat we nog veel vermogen laten liggen.
+          Sommige nodes, zoals de G2 en de Heltec v4 kunnen met meer vermogen
+          zenden. Het is ook mogelijk om het signaal van een node te versterken
+          met een signal booster tussen node en antenne. Soms biedt dat een
+          oplossing om een node te bereiken die je anders niet bereikt.
         </p>
         <p>
-          Voel je vrij om het label te gebruiken wanneer je nodes in Twente
-          plaatst, maar kondig dat dan wel even aan in de bovengenoemde Telegram
-          groep zodat wij jou weer kunnen vinden mocht er iets zijn.
-        </p>
-        <h3>Deze website</h3>
-        <p>
-          Als je feedback hebt op de teksten op deze website, of denkt dat het
-          nog mooier kan: alles is Open Source en voel je vrij om een pull
-          request te openen op
-          <a href="https://github.com/Timendus/mesh-netwerk-twente">Github</a>.
+          Je kunt het vermogen van je node beperken in de Meshtastic firmware.
+          Standaard staat dit ingesteld op 27dBm, wat betekent dat je alleen
+          beperkt wordt door het vermogen van je hardware. Soms helpt een lager
+          vermogen om beter te kunnen ontvangen, of om binnen de grenzen van de
+          wet te blijven. Je vindt deze instelling onder "LoRa" > "Transmit
+          Power".
         </p>
         <p>
-          Mocht je in een andere regio ook gebruik willen maken van deze
-          website, neem dan even contact op via het
-          <a href="/twente#contact">contactformulier</a>,
-          <a href="https://github.com/Timendus/mesh-netwerk-twente">Github</a>
-          of <a href="https://t.me/twentastic">Telegram</a>, dan kunnen we vast
-          wel iets moois regelen.
+          Houd er echter rekening mee dat harder zenden niets doet voor je
+          vermogen om signalen van anderen te ontvangen, waardoor je al snel een
+          asymmetrische verbinding krijgt. Daar gaan we hieronder nog even
+          dieper op in. Een betere "line of sight" en een betere antenne hebben
+          hier geen last van, en zijn daarom een betere eerste keuze om in te
+          investeren. Ook met 160mW kun je 10km+ zenden.
+        </p>
+
+        <h4>Asymmetrische verbindingen</h4>
+        <p>
+          Het gebeurt al snel dat je een node wel kunt ontvangen, maar niet kunt
+          bereiken, of andersom. Dat kan aan een verschillend zendvermogen
+          liggen, maar ook aan het type antenne, de plaatsing, reflecties of aan
+          andere omgevingsfactoren. Je kunt dit testen door een traceroute te
+          doen naar nodes om je heen. Als je geen respons krijgt of als je een
+          respons krijgt met veel hops of een slecht signaal in één van beide
+          richtingen, dan heb je een asymmetrische verbinding.
+        </p>
+        <p>
+          Het is op zich niet erg wanneer een verbinding asymmetrisch is. We
+          maken er bij routers gebruik van om packets zo ver mogelijk te
+          verspreiden met zo min mogelijk hops. Maar voor de mesh als geheel
+          proberen we het wel te voorkomen. Anders krijgen we
+          eenrichtingsverkeer van de ene kant van de mesh naar de andere kant,
+          en dat is een stuk minder nuttig.
+        </p>
+        <p>
+          Wanneer je merkt dat jouw node andere nodes niet (goed) ontvangt kun
+          je spelen met de plaatsing (binnen of buiten, hoogte) en de kwaliteit
+          van de antenne en de antennekabel. Wanneer jouw node niet ontvangen
+          wordt door andere nodes kun je met dezelfde factoren spelen, en daarna
+          ook nog overwegen om met een hoger zendvermogen te werken.
         </p>
       </section>
     </main>
