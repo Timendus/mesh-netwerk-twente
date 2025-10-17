@@ -134,6 +134,40 @@
           </a>
         </p>
 
+        <h4>Neighbour Info</h4>
+        <p>
+          Zoals je op de kaart kunt zien is het mogelijk om naast je positie ook
+          te delen welke nodes jouw node ontvangt. De zogenaamde Neighbour Info.
+          Deze informatie zorgt voor de blauwe lijnen op de kaart, wat een goede
+          indruk geeft van de bestaande verbindingen.
+        </p>
+        <p>
+          Wanneer je een node hebt die verbonden is met het Internet en MQTT aan
+          heeft staan is het eenvoudig. Je hoeft alleen de Neighbour Info module
+          aan te zetten en de node zal elke paar uur de juiste informatie
+          doorsturen naar de MQTT server.
+        </p>
+        <p>
+          Voor nodes die niet verbonden zijn met MQTT heeft Meshtastic het
+          helaas recent een stuk lastiger gemaakt. Je kunt in de instellingen
+          van de Neighbour Info module aangeven dat deze ook via LoRa moeten
+          worden verzonden. Op die manier kunnen ze, net zoals je positie, via
+          een node die wel online is alsnog op de kaart komen. Echter werkt dit
+          alleen op het primaire kanaal, en sinds recent niet meer wanneer je
+          primaire kanaal op het standaard kanaal staat ingesteld.
+          <em
+            >LongFast als primaire kanaal werkt dus niet in combinatie met
+            Neighbour info.</em
+          >
+        </p>
+        <p>
+          De enige manier om daar omheen te werken is door je primaire kanaal op
+          een eigen privé-kanaal in te stellen en LongFast als secundair kanaal
+          toe te voegen. Het gebruikte privé-kanaal moet óók toegevoegd zijn aan
+          nodes die online zijn via MQTT, zodat deze de Neighbour info kunnen
+          ontvangen en door kunnen zetten naar de server.
+        </p>
+
         <h3>Tips & Tricks voor betere verbindingen</h3>
 
         <h4>"Line of sight"</h4>
