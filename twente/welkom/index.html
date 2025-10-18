@@ -142,10 +142,10 @@
           indruk geeft van de bestaande verbindingen.
         </p>
         <p>
-          Wanneer je een node hebt die verbonden is met het Internet en MQTT aan
-          heeft staan is het eenvoudig. Je hoeft alleen de Neighbour Info module
-          aan te zetten en de node zal elke paar uur de juiste informatie
-          doorsturen naar de MQTT server.
+          Wanneer je een node hebt die verbonden is met het Internet en met
+          <a href="https://www.meshnet.nl/wiki/MQTT">MQTT</a> is het eenvoudig.
+          Je hoeft alleen de Neighbour Info module aan te zetten en de node zal
+          elke paar uur de juiste informatie doorsturen naar de MQTT server.
         </p>
         <p>
           Voor nodes die niet verbonden zijn met MQTT heeft Meshtastic het
@@ -165,7 +165,9 @@
           een eigen privé-kanaal in te stellen en LongFast als secundair kanaal
           toe te voegen. Het gebruikte privé-kanaal moet óók toegevoegd zijn aan
           nodes die online zijn via MQTT, zodat deze de Neighbour info kunnen
-          ontvangen en door kunnen zetten naar de server.
+          ontvangen en door kunnen zetten naar de server. Dit hoeft voor de
+          ontvangende node niet het primaire kanaal te zijn, maar vergeet niet
+          om de uplink aan te zetten voor dit kanaal.
         </p>
 
         <h3>Tips & Tricks voor betere verbindingen</h3>
