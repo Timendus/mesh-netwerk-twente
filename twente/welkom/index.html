@@ -20,8 +20,9 @@
           <h2>Welkom op de Twentse mesh!</h2>
 
           Waarschijnlijk heb je deze pagina gevonden naar aanleiding van een
-          berichtje in LongFast. We willen je graag welkom heten op de Twentse
-          mesh en wat tips en tricks delen die handig zijn om te weten.
+          berichtje in LongFast of het Public channel. We willen je graag welkom
+          heten op de Twentse mesh en wat tips en tricks delen die handig zijn
+          om te weten.
         </section>
       </section>
 
@@ -29,6 +30,7 @@
         <h3>Digitale dienstverlening</h3>
 
         <h4>Communicatie</h4>
+        <p>Op MeshCore vind je ons op de "EU/UK (Narrow)" preset.</p>
         <p>
           Op Meshtastic maken we gebruik van de kanalen LongFast en Twente. Het
           kanaal Twente heeft het gebruikelijke wachtwoord <code>AQ==</code>, of
@@ -170,6 +172,93 @@
           om de uplink aan te zetten voor dit kanaal.
         </p>
 
+        <h3>Instellingen voor MeshCore nodes</h3>
+
+        <h4>Rollen</h4>
+        <p>
+          MeshCore maakt onderscheid tussen "companion" nodes en "repeater"
+          nodes. De eerste zijn om mee te communiceren vanaf je smartphone, en
+          zullen nooit berichten herhalen. Daarvoor is de tweede categorie;
+          repeaters kunnen niets anders dan berichten herhalen. Je kunt er
+          verder niet mee verbinden.
+        </p>
+        <p>
+          Het maakt het leven makkelijk om er van elk één te flashen. Dan kun je
+          beter trouble-shooten of je nodes goed werken en er gewoon niemand in
+          de buurt is, of dat je iets verkeerd hebt ingesteld. Hang je repeater
+          op zolder of liever nog op het dak en alles wat er op de mesh gebeurt
+          wordt netjes herhaald voor je companion node in de woonkamer.
+        </p>
+        <p>
+          In tegenstelling tot Meshtastic hoef je je geen zorgen te maken dat je
+          met de rollen van je nodes je buren tot last bent. Een extra repeater
+          toevoegen aan de mesh maakt deze alleen maar sterker.
+        </p>
+
+        <h4>Instellingen</h4>
+        <p>
+          Zoals gemeld zitten we voor MeshCore op de "EU/UK (Narrow)" preset.
+          Zorg ervoor dat je je nodes reboot na het instellen van deze preset,
+          anders wordt ze niet echt van kracht. Na elke reboot van een repeater
+          moet je ook even de klok synchroniseren via de settings van de
+          repeater.
+        </p>
+        <p>
+          De firmware voor de Heltec v4 is standaard zo ingesteld dat deze zich
+          een beetje "inhoudt", en met ongeveer evenveel vermogen zendt als
+          andere nodes. Mocht je het volledige zendvermogen willen benutten, dan
+          kun je dat met het commando
+          <code>set tx 22</code> in de "Command Line" tab van de repeater
+          bewerkstelligen.
+        </p>
+
+        <h4>Adverts</h4>
+        <p>
+          Adverts zijn de manier waarop je aanwezigheid in de mesh wordt gedeeld
+          met andere nodes. Flood Advert betekent dat alle repeaters dat bericht
+          mogen herhalen, in tegenstelling tot een Zero-hop Advert die niet
+          herhaald mag worden.
+        </p>
+        <p>
+          Standaard sturen repeaters elke 3 uur een Zero-hop Advert en elke
+          twaalf uur een Flood Advert. Tenzij de beheerder van de repeater dat
+          anders heeft ingesteld. Companion nodes sturen alleen Adverts wanneer
+          de gebruiker daarom vraagt. Het kan dus best even duren voordat je
+          echt ziet wat er zich om je heen bevindt.
+        </p>
+
+        <h4>Op de kaart zetten</h4>
+        <p>
+          De MeshCore app kent twee kaarten; het tabblad "Map" rechts onderin de
+          app waarin alle nodes verschijnen die je zelf hebt gezien op de mesh
+          en de "Internet Map" die je kunt bereiken via het hoofdmenu (drie
+          stipjes rechtsboven). Wanneer je een positie instelt voor je nodes dan
+          verschijnen deze automatisch op de eerste kaart, maar niet op de
+          Internet Map.
+        </p>
+        <p>
+          Er is een andere procedure voor companion nodes en repeaters om jezelf
+          ook op de Internet Map te zetten:
+        </p>
+        <p>
+          Voor companion nodes ga je naar het hoofdscherm, klik je rechts
+          bovenin op de drie puntjes en dan op 'Internet Map'. Daar klik je
+          wederom op de drie puntjes en kies je voor 'Add me to the Map'.
+        </p>
+        <p>
+          Voor repeaters (en room servers) ga je naar de "Contacts" tab op het
+          hoofdscherm en klik je op de drie puntjes naast de betreffende
+          repeater. Kies "Share" en dan "Upload to Internet Map".
+        </p>
+        <p>
+          Je kunt de Internet Map
+          <a
+            target="_blank"
+            href="https://map.meshcore.dev/?zoom=12&lat=52.2703&lon=6.7592"
+            >ook online bekijken</a
+          >.
+        </p>
+
         <h3>Tips & Tricks voor betere verbindingen</h3>
 
         <h4>"Line of sight"</h4>
@@ -258,12 +347,17 @@
           oplossing om een node te bereiken die je anders niet bereikt.
         </p>
         <p>
-          Je kunt het vermogen van je node beperken in de Meshtastic firmware.
-          Standaard staat dit ingesteld op 27dBm, wat betekent dat je alleen
-          beperkt wordt door het vermogen van je hardware. Soms helpt een lager
-          vermogen om beter te kunnen ontvangen, of om binnen de grenzen van de
-          wet te blijven. Je vindt deze instelling onder "LoRa" > "Transmit
-          Power".
+          Je kunt het vermogen van je node beperken in de instellingen. Bij
+          Meshtastic staat dit standaard ingesteld op 27dBm, wat betekent dat je
+          alleen beperkt wordt door het vermogen van je hardware. Bij MeshCore
+          verschilt het per node. Soms helpt een lager vermogen om beter te
+          kunnen ontvangen, of om binnen de grenzen van de wet te blijven. In de
+          Meshtastic app vind je deze instelling onder "LoRa" > "Transmit
+          Power". In de MeshCore app onder "settings" (tandwieltje) voor
+          companion radio's en in de command line voor repeaters (<code
+            >get tx</code
+          >
+          / <code>set tx 27</code>).
         </p>
         <p>
           Houd er echter rekening mee dat harder zenden niets doet voor je
@@ -286,9 +380,9 @@
         </p>
         <p>
           Het is op zich niet erg wanneer een verbinding asymmetrisch is. We
-          maken er bij routers gebruik van om packets zo ver mogelijk te
-          verspreiden met zo min mogelijk hops. Maar voor de mesh als geheel
-          proberen we het wel te voorkomen. Anders krijgen we
+          maken er bij routers en repeaters gebruik van om packets zo ver
+          mogelijk te verspreiden met zo min mogelijk hops. Maar voor de mesh
+          als geheel proberen we het wel te voorkomen. Anders krijgen we
           eenrichtingsverkeer van de ene kant van de mesh naar de andere kant,
           en dat is een stuk minder nuttig.
         </p>
