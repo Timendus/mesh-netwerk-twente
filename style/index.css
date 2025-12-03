@@ -293,3 +293,22 @@ section.label {
     }
   }
 }
+
+[data-deeplink] {
+  position: relative;
+
+  & > a:first-child {
+    display: none;
+    position: absolute;
+    left: -35px;
+    width: 35px;
+    height: auto;
+    text-decoration: none;
+    color: #bbb;
+    text-align: center;
+  }
+
+  &:hover > a:first-child {
+    display: block;
+  }
+}

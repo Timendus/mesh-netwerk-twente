@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mesh Network</title>
     <link rel="stylesheet" type="text/css" href="/style/index.css" />
+    <script src="/index.js" type="text/javascript"></script>
   </head>
   <body>
     <header>
@@ -27,9 +28,9 @@
       </section>
 
       <section class="map">
-        <h3>Digitale dienstverlening</h3>
+        <h3 data-deeplink id="dd">Digitale dienstverlening</h3>
 
-        <h4>Communicatie</h4>
+        <h4 data-deeplink id="comms">Communicatie</h4>
         <p>Op MeshCore vind je ons op de "EU/UK (Narrow)" preset.</p>
         <p>
           Op Meshtastic maken we gebruik van de kanalen LongFast en Twente. Het
@@ -51,7 +52,7 @@
           <a href="https://t.me/twentastic">deze link</a>.
         </p>
 
-        <h4>Rogue nodes</h4>
+        <h4 data-deeplink id="rogues">Rogue nodes</h4>
         <p>
           Als je een node "in het wild" in Twente wilt installeren, dan hebben
           we op deze website een <a href="/generator">label generator</a> om het
@@ -69,7 +70,7 @@
           kunnen vinden mocht er iets zijn.
         </p>
 
-        <h4>Deze website</h4>
+        <h4 data-deeplink id="site">Deze website</h4>
         <p>
           Als je feedback hebt op de teksten op deze website, of denkt dat het
           nog mooier kan: alles is Open Source en voel je vrij om een pull
@@ -85,9 +86,11 @@
           wel iets moois regelen.
         </p>
 
-        <h3 id="meshtastic">Instellingen voor Meshtastic nodes</h3>
+        <!-- Deeplink alias -->
+        <a name="meshtastic"></a>
+        <h3 data-deeplink id="mt">Instellingen voor Meshtastic nodes</h3>
 
-        <h4>Rollen</h4>
+        <h4 data-deeplink id="rol-mt">Rollen</h4>
         <p>
           De rollen <code>CLIENT</code>, <code>CLIENT_MUTE</code> en
           <code>CLIENT_BASE</code> zijn veilig om in Twente te gebruiken. We
@@ -107,7 +110,7 @@
           hetzelfde.
         </p>
 
-        <h4>Posities</h4>
+        <h4 data-deeplink id="pos-mt">Posities</h4>
         <p>
           Het is fijn als de posities die je nodes delen een beetje kloppen. Dit
           helpt ons om te begrijpen welke verbindingen we wel en niet kunnen
@@ -136,7 +139,7 @@
           </a>
         </p>
 
-        <h4>Neighbour Info</h4>
+        <h4 data-deeplink id="neighbors">Neighbour Info</h4>
         <p>
           Zoals je op de kaart kunt zien is het mogelijk om naast je positie ook
           te delen welke nodes jouw node ontvangt. De zogenaamde Neighbour Info.
@@ -172,9 +175,11 @@
           om de uplink aan te zetten voor dit kanaal.
         </p>
 
-        <h3 id="meshcore">Instellingen voor MeshCore nodes</h3>
+        <!-- Deeplink alias -->
+        <a name="meshcore"></a>
+        <h3 data-deeplink id="mc">Instellingen voor MeshCore nodes</h3>
 
-        <h4>Rollen</h4>
+        <h4 data-deeplink id="rol-mc">Rollen</h4>
         <p>
           MeshCore maakt onderscheid tussen "companion" nodes en "repeater"
           nodes. De eerste zijn om mee te communiceren vanaf je smartphone, en
@@ -195,7 +200,7 @@
           toevoegen aan de mesh maakt deze alleen maar sterker.
         </p>
 
-        <h4>Instellingen</h4>
+        <h4 data-deeplink id="setup-mc">Instellingen</h4>
         <p>
           Zoals gemeld zitten we voor MeshCore op de "EU/UK (Narrow)" preset.
           Zorg ervoor dat je je nodes reboot na het instellen van deze preset,
@@ -212,7 +217,7 @@
           bewerkstelligen.
         </p>
 
-        <h4>Adverts</h4>
+        <h4 data-deeplink id="adverts">Adverts</h4>
         <p>
           Adverts zijn de manier waarop je aanwezigheid in de mesh wordt gedeeld
           met andere nodes. Flood Advert betekent dat alle repeaters dat bericht
@@ -227,7 +232,7 @@
           echt ziet wat er zich om je heen bevindt.
         </p>
 
-        <h4>Op de kaart zetten</h4>
+        <h4 data-deeplink id="pos-mc">Op de kaart zetten</h4>
         <p>
           De MeshCore app kent twee kaarten; het tabblad "Map" rechts onderin de
           app waarin alle nodes verschijnen die je zelf hebt gezien op de mesh
@@ -260,9 +265,11 @@
           </a>
         </p>
 
-        <h3 id="connecties">Tips & Tricks voor betere verbindingen</h3>
+        <h3 data-deeplink id="connecties">
+          Tips & Tricks voor betere verbindingen
+        </h3>
 
-        <h4>"Line of sight"</h4>
+        <h4 data-deeplink id="los">"Line of sight"</h4>
         <p>
           Je kunt verrassend lange verbindingen maken zolang twee nodes elkaar
           maar kunnen "zien". Hoe meer obstakels er tussen zender en ontvanger
@@ -284,7 +291,7 @@
           naar hoge locaties om nodes te plaatsen.
         </p>
 
-        <h4>Een goede antenne</h4>
+        <h4 data-deeplink id="antenne">Een goede antenne</h4>
         <p>
           Na de locatie is de grootste bepalende factor de antenne. Antennes
           kunnen meer of minder geschikt zijn voor de frequentie die we
@@ -328,7 +335,7 @@
           waterdichte behuizing.
         </p>
 
-        <h4>Meer zendvermogen</h4>
+        <h4 data-deeplink id="vermogen">Meer zendvermogen</h4>
         <p>
           Het is in Europa toegestaan om met 500mW (27dBm) te zenden in de ISM
           band waar onze mesh actief is. Zolang je onder de duty cycle van
@@ -369,7 +376,7 @@
           investeren. Ook met 160mW kun je 10km+ zenden.
         </p>
 
-        <h4>Asymmetrische verbindingen</h4>
+        <h4 data-deeplink id="asym">Asymmetrische verbindingen</h4>
         <p>
           Het gebeurt al snel dat je een node wel kunt ontvangen, maar niet kunt
           bereiken, of andersom. Dat kan aan een verschillend zendvermogen
